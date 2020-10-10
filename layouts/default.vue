@@ -230,19 +230,24 @@ export default {
       this.$darkmode();
     },
   },
-  mounted() {
-    this.mode = window.matchMedia("(prefers-color-scheme: dark)");
+  async created() {
+    try {
+      await this.$store.dispatch("fetchlist");
+    } catch (e) {
+      console.log(e);
+    }
   },
 };
 </script>
 <style lang="postcss">
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap");
+
 .dark-mode :not(img):not(.inverted) {
   filter: invert(100%);
 }
 
 html {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Quicksand", sans-serif;
 }
 .badge {
   @apply absolute top-0 ml-2 p-2 mt-2 bg-secondary-100 text-secondary-200 text-xs uppercase font-bold rounded-full;

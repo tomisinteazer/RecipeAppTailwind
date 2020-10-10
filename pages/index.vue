@@ -13,7 +13,7 @@
 
     <div>
       <h4 class="font-bold pb-2 mt-12 border-b border-gray-200">
-        Latest Recipes
+        Latest Recipes by Joshua Wiessman
       </h4>
 
       <div class="mt-8 grid lg:grid-cols-3 gap-10">
@@ -35,28 +35,29 @@
               <div class="badge">
                 <svg
                   class="inline-block w-5"
+                  xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  stroke="currentColor"
                   viewBox="0 0 24 24"
+                  stroke="currentColor"
                 >
-                  <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                  />
                 </svg>
-                <span>{{ recipe.timeTaken }}</span>
+                <span>view</span>
               </div>
             </div>
           </nuxt-link>
         </div>
-      </div>
-    </div>
-
-    <div class="mt-12 flex justify-center">
-      <div
-        class="btn bg-secondary-100 text-secondary-200 inline-block hover:shadow-inner transform hover:scale-125 hover:bg-opacity-50 transition ease-out duration-300"
-      >
-        Load more
       </div>
     </div>
   </div>
@@ -76,29 +77,18 @@ export default {
     };
   },
   methods: {
-    async fetchlist() {
-      const data = await this.$axios
-        .$get(
-          "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU&channelId=UChBEbMKI1eCcejTtmI32UEw&part=snippet,id&order=date&maxResults=70"
-        )
-        .then((e) => {
-          console.log(e.items[0].snippet.description);
-          let myrecipies = [];
-          let ytrecipes = e.items.forEach((r) => {
-            myrecipies.push({
-              title: r.snippet.title,
-              desc: r.snippet.description,
-              image: r.snippet.thumbnails.medium.url,
-              vidId: "/recipe/" + r.id.videoId,
-            });
-          });
-          this.recipes = myrecipies;
-        });
-      this.$isdark();
+    fulfill() {
+      this.recipes = this.$store.getters.getRecipes;
+      setTimeout(() => {
+        this.$isdark();
+      }, 0);
     },
   },
   mounted() {
-    setTimeout(this.fetchlist, 1000);
+    this.fulfill();
+    setTimeout(() => {
+      this.fulfill();
+    }, 5000);
   },
 };
 //query api per videos https://www.googleapis.com/youtube/v3/videos?part=snippet&id=seQblg9JoIU&key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU
