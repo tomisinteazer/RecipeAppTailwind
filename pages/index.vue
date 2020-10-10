@@ -19,33 +19,35 @@
       <div class="mt-8 grid lg:grid-cols-3 gap-10">
         <!-- cards go here -->
         <div v-for="(recipe, i) in recipes" :key="i">
-          <div class="card hover:shadow-lg">
-            <img
-              src="/stew.jpg"
-              alt="stew"
-              class="h-32 sm:h-48 w-full object-cover"
-            />
-            <div class="m-4">
-              <span class="font-bold">{{ recipe.title }}</span>
-              <span class="block text-gray-500 text-sm"
-                >Recipe by {{ recipe.owner }}
-              </span>
+          <nuxt-link :to="recipe.vidId">
+            <div class="card hover:shadow-lg">
+              <img
+                :src="recipe.image"
+                alt="stew"
+                class="h-32 sm:h-48 w-full object-cover"
+              />
+              <div class="m-4">
+                <span class="font-bold">{{ recipe.title }}</span>
+                <span class="block text-gray-500 text-sm">
+                  {{ recipe.desc }}
+                </span>
+              </div>
+              <div class="badge">
+                <svg
+                  class="inline-block w-5"
+                  fill="none"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span>{{ recipe.timeTaken }}</span>
+              </div>
             </div>
-            <div class="badge">
-              <svg
-                class="inline-block w-5"
-                fill="none"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-              <span>{{ recipe.timeTaken }}</span>
-            </div>
-          </div>
+          </nuxt-link>
         </div>
       </div>
     </div>
@@ -62,46 +64,44 @@
 
 <script>
 export default {
-  data() {
+  head() {
     return {
-      recipes: [
-        {
-          title: "5 Bean Chili Stew",
-          owner: "mario",
-          timeTaken: "25mins",
-        },
-        {
-          title: "Veg Noodles",
-          owner: "mario",
-          timeTaken: "25mins",
-        },
-        {
-          title: "Tofu Curry",
-          owner: "mario",
-          timeTaken: "25mins",
-        },
-        {
-          title: "Tofu",
-          owner: "luigi",
-          timeTaken: "25mins",
-        },
-        {
-          title: "okonomiyaki",
-          owner: "connor",
-          timeTaken: "30mins",
-        },
-        {
-          title: "sukimen",
-          owner: "joey",
-          timeTaken: "30mins",
-        },
-      ],
+      title: "The Recipe Archives",
     };
   },
+
+  data() {
+    return {
+      recipes: [],
+    };
+  },
+  methods: {
+    async fetchlist() {
+      const data = await this.$axios
+        .$get(
+          "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU&channelId=UChBEbMKI1eCcejTtmI32UEw&part=snippet,id&order=date&maxResults=70"
+        )
+        .then((e) => {
+          console.log(e.items[0].snippet.description);
+          let myrecipies = [];
+          let ytrecipes = e.items.forEach((r) => {
+            myrecipies.push({
+              title: r.snippet.title,
+              desc: r.snippet.description,
+              image: r.snippet.thumbnails.medium.url,
+              vidId: "/recipe/" + r.id.videoId,
+            });
+          });
+          this.recipes = myrecipies;
+        });
+      this.$isdark();
+    },
+  },
   mounted() {
-    this.$isdark();
+    setTimeout(this.fetchlist, 1000);
   },
 };
+//query api per videos https://www.googleapis.com/youtube/v3/videos?part=snippet&id=seQblg9JoIU&key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU
 </script>
 <style lang="postcss">
 .card {
