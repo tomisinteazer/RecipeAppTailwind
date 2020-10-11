@@ -9,23 +9,19 @@ export default {
   },
   actions: {
     async fetchlist({ commit }) {
-      await this.$axios
-        .$get(
-          "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU&channelId=UChBEbMKI1eCcejTtmI32UEw&part=snippet,id&order=date&maxResults=70"
-        )
-        .then(e => {
-          let myrecipes = [];
-          e.items.forEach(r => {
-            myrecipes.push({
-              title: r.snippet.title,
-              desc: r.snippet.description,
-              image: r.snippet.thumbnails.medium.url,
-              vidId: "/recipe/" + r.id.videoId
-            });
+      await this.$axios.$get("/req.json").then(e => {
+        let myrecipes = [];
+        e.items.forEach(r => {
+          myrecipes.push({
+            title: r.snippet.title,
+            desc: r.snippet.description,
+            image: r.snippet.thumbnails.medium.url,
+            vidId: "/recipe/" + r.id.videoId
           });
-
-          commit("getRecipes", myrecipes);
         });
+
+        commit("getRecipes", myrecipes);
+      });
     }
   },
   modules: {},

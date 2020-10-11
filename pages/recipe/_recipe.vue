@@ -58,7 +58,7 @@ export default {
   },
   data() {
     return {
-      recipeData: "ingredients and details",
+      recipeData: ["ingredients and details"],
       img: "https://dummyimage.com/1200x500",
       title: "Recipe title",
       videolink: "#",
@@ -68,7 +68,7 @@ export default {
     async fetchSomething(id) {
       const data = await this.$axios
         .$get(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id.recipe}&key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU`
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id.recipe}&key=AIzaSyDIWMCj2aDsru6R0ApCHKrFJbWU2Ey2THM`
         )
         .then((e) => {
           let formatted = e.items[0].snippet.description.split("\n");
