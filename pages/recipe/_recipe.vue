@@ -68,7 +68,7 @@ export default {
     async fetchSomething(id) {
       const data = await this.$axios
         .$get(
-          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id.recipe}&key=AIzaSyBrHREfUwmNSO1liUHsv4YvR4_Z-ajGFW0`
+          `https://www.googleapis.com/youtube/v3/videos?part=snippet&id=${id.recipe}&key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU`
         )
         .then((e) => {
           let formatted = e.items[0].snippet.description.split("\n");

@@ -11,7 +11,7 @@ export default {
     async fetchlist({ commit }) {
       await this.$axios
         .$get(
-          "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBrHREfUwmNSO1liUHsv4YvR4_Z-ajGFW0&channelId=UChBEbMKI1eCcejTtmI32UEw&part=snippet,id&order=date&maxResults=70"
+          "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBhUrkcxR4QuWKFyWyI0Nlbj9SrMotVDxU&channelId=UChBEbMKI1eCcejTtmI32UEw&part=snippet,id&order=date&maxResults=70"
         )
         .then(e => {
           let myrecipes = [];

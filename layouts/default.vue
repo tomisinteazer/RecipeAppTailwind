@@ -1,7 +1,7 @@
 <template>
-  <div class="grid md:grid-cols-6">
+  <div class="grid md:grid-cols-6 w-full">
     <div class="md:col-span-1 md:flex md:justify-end bg-white">
-      <nav class="text-right">
+      <nav class="text-right px-4 py-4">
         <div class="flex justify-between items-center">
           <h1 class="font-bold uppercase p-4 border-b border-gray-100">
             <a class="hover:text-gray-700 tracking-widest text-grey-400"
@@ -46,7 +46,7 @@
             <nuxt-link
               to="/"
               href="#"
-              class="block px-4 flex justify-end border-r-4 border-primary"
+              class="px-4 flex justify-end border-r-4 border-primary"
             >
               <span>Home</span>
               <svg
