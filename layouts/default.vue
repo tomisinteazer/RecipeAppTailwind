@@ -4,9 +4,11 @@
       <nav class="text-right px-4 py-4">
         <div class="flex justify-between items-center">
           <h1 class="font-bold uppercase p-4 border-b border-gray-100">
-            <a class="hover:text-gray-700 tracking-widest text-grey-400"
+            <nuxt-link
+              to="/"
+              class="hover:text-gray-700 tracking-widest text-grey-400"
               >The RECIPE Archives
-            </a>
+            </nuxt-link>
           </h1>
           <div
             class="px-2 py-2 text-primary cursor-pointer border-b border-primary"
