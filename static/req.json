@@ -1,13 +1,81 @@
 {
   "kind": "youtube#searchListResponse",
-  "etag": "2Y7O3OhB_3qIVA3_OYtsT7AF3yQ",
+  "etag": "49WO4eKkEgFT0Rons3VzIBaDRr4",
   "nextPageToken": "CDIQAA",
   "regionCode": "NG",
   "pageInfo": {
-    "totalResults": 301,
+    "totalResults": 302,
     "resultsPerPage": 50
   },
   "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "V4i4ejy-Z9FyD-1YQZHRDCfPHns",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fvjAc0zYeLg"
+      },
+      "snippet": {
+        "publishedAt": "2020-11-01T14:00:07Z",
+        "channelId": "UChBEbMKI1eCcejTtmI32UEw",
+        "title": "Making Pillsbury Toaster Strudel At Home | But Better",
+        "description": "Ah, the nostalgia of toaster strudel before school. You think it's good until you realize a very important homemade secret. A secret... that we will discuss today.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fvjAc0zYeLg/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fvjAc0zYeLg/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fvjAc0zYeLg/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Joshua Weissman",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-11-01T14:00:07Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "OEGOMnCbrjqtBwwcKLfPrVFBfDM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "_cXVULu9RvE"
+      },
+      "snippet": {
+        "publishedAt": "2020-10-28T14:00:07Z",
+        "channelId": "UChBEbMKI1eCcejTtmI32UEw",
+        "title": "Super Cheesy Homemade Deep Dish Pizza",
+        "description": "Click here https://on.gei.co/2CAITlt to bundle your home and car insurance with GEICO Is Chicago style deep dish pizza actually pizza? I don't think so... it's more ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/_cXVULu9RvE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/_cXVULu9RvE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/_cXVULu9RvE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Joshua Weissman",
+        "liveBroadcastContent": "none",
+        "publishTime": "2020-10-28T14:00:07Z"
+      }
+    },
     {
       "kind": "youtube#searchResult",
       "etag": "UJWnGSUlLZNGNTqxX90lmVka_V8",
@@ -1638,74 +1706,6 @@
         "channelTitle": "Joshua Weissman",
         "liveBroadcastContent": "none",
         "publishTime": "2020-05-31T14:00:19Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "kl4HGZ3UbTE3p_e9Zziko_U52zo",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "Yj7VluL7i60"
-      },
-      "snippet": {
-        "publishedAt": "2020-05-27T14:00:22Z",
-        "channelId": "UChBEbMKI1eCcejTtmI32UEw",
-        "title": "Best Muffuletta Of Your Life With Homemade Muffuletta Bread",
-        "description": "The Muffuletta is a great sandwich, but it's far better when you make it at home. I'm talking homemade muffuletta bread, homemade giardiniera, and a beautiful ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/Yj7VluL7i60/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/Yj7VluL7i60/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/Yj7VluL7i60/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Joshua Weissman",
-        "liveBroadcastContent": "none",
-        "publishTime": "2020-05-27T14:00:22Z"
-      }
-    },
-    {
-      "kind": "youtube#searchResult",
-      "etag": "HJsEZ1BzynCLBOFYjprUlWWumC4",
-      "id": {
-        "kind": "youtube#video",
-        "videoId": "fTFWvpt1BSY"
-      },
-      "snippet": {
-        "publishedAt": "2020-05-24T14:00:30Z",
-        "channelId": "UChBEbMKI1eCcejTtmI32UEw",
-        "title": "Making The Whataburger Honey Butter Chicken Biscuit At Home | But Better",
-        "description": "Making the ultimate fried chicken biscuit at home isn't as much of a challenge as we thought. Whataburger Honey Butter Chicken Biscuit, you're in for an ...",
-        "thumbnails": {
-          "default": {
-            "url": "https://i.ytimg.com/vi/fTFWvpt1BSY/default.jpg",
-            "width": 120,
-            "height": 90
-          },
-          "medium": {
-            "url": "https://i.ytimg.com/vi/fTFWvpt1BSY/mqdefault.jpg",
-            "width": 320,
-            "height": 180
-          },
-          "high": {
-            "url": "https://i.ytimg.com/vi/fTFWvpt1BSY/hqdefault.jpg",
-            "width": 480,
-            "height": 360
-          }
-        },
-        "channelTitle": "Joshua Weissman",
-        "liveBroadcastContent": "none",
-        "publishTime": "2020-05-24T14:00:30Z"
       }
     }
   ]
