@@ -12,7 +12,7 @@
               Recipes
             </h2>
             <h3 class="text-2xl font-semibold tracking-wider">
-              The intercontinental array
+              Update in Progress ...
             </h3>
           </header>
           <h4 class="font-bold pb-2 mt-12 border-b">
