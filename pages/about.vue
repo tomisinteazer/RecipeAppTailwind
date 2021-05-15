@@ -17,7 +17,7 @@
             <img
               alt="content"
               class="object-cover object-center h-full w-full"
-              src="https://tomisinteazer-io.web.app/newpin.jpg"
+              src="/newpin.jpg"
             />
           </div>
           <div class="flex flex-col sm:flex-row mt-10">
@@ -27,7 +27,7 @@
               >
                 <img
                   class="w-30 h-30 rounded-full"
-                  src="https://scontent-los2-1.cdninstagram.com/v/t51.2885-19/s150x150/106255528_639629886637863_5735241965114432966_n.jpg?_nc_ht=scontent-los2-1.cdninstagram.com&_nc_ohc=pekbdlHvL-AAX_s9b9-&oh=fb1800f5c63ca2a8a1e279dfd7ec51b0&oe=5FACB82F"
+                  src="/myImage.jpg"
                   alt="tomisinteazer"
                 />
               </div>

@@ -12,14 +12,14 @@
               Recipes
             </h2>
             <h3 class="text-2xl font-semibold tracking-wider">
-              Update in Progress ...
+              A collection of fine dining 2021
             </h3>
           </header>
           <h4 class="font-bold pb-2 mt-12 border-b">
             Latest Recipes by Joshua Wiessman
           </h4>
           <p class="mb-8 leading-relaxed">
-            Click on a recipe to view ingredients and get the tutorial you are
+            Click on a recipe and get the tutorial you are
             sure to love it.
           </p>
           <div class="flex justify-center">
