@@ -64,6 +64,7 @@
                 His cooking was the inspriration for this app and i"m just a fan
                 you but can talk to me.
               </p>
+              <img style="height:0px" src="/rate.jpg" alt="tomisinteazer" />
               <nuxt-link
                 to="/contact"
                 class="text-primary inline-flex items-center"
@@ -91,6 +92,6 @@
 export default {
   mounted() {
     this.$isdark();
-  },
+  }
 };
 </script>
